@@ -76,17 +76,7 @@ There are also predefined priority levels (LOW to URGENT) and status stages (TOD
 
 One feature I found interesting is in task_parser.js.
 
-The system can understand tasks written in simple text. For example:
-
-Buy milk @shopping !2 #tomorrow
-
-The program automatically detects:
-
-@shopping → tag
-
-!2 → priority
-
-#tomorrow → due date
+The system can understand tasks written in simple text. 
 
 This makes the application faster and more user-friendly.
 
