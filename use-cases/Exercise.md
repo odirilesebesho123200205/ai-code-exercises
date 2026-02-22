@@ -72,7 +72,7 @@ It also includes useful methods like:
 
 There are also predefined priority levels (LOW to URGENT) and status stages (TODO to DONE). This ensures consistency in the system.
 
-.Smart Text Parsing
+SMART TEXT PARSING
 
 One feature I found interesting is in task_parser.js.
 
@@ -84,35 +84,16 @@ Task Scoring and Sorting
 
 The task_priority.js file calculates a score for each task.
 
-The score increases if:
+The score increases if the task has high priority,the due date is close or overdue
+or if it has important tags.
 
-The task has high priority
+The score decreases if the task is completed, this allows the system to sort tasks by importance and show the most urgent ones first.
 
-The due date is close or overdue
+MERGING TASK LISTS
 
-It has important tags
+The task_list_merge.js file handles merging tasks from two sources.If a task exists in both places, the system keeps the most recently updated version,gives priority to completed tasks and combines tags from both versions.This shows that the system supports synchronization and smart conflict handling.
 
-The score decreases if:
-
-The task is completed
-
-This allows the system to sort tasks by importance and show the most urgent ones first.
-
-Merging Task Lists
-
-The task_list_merge.js file handles merging tasks from two sources (for example, local and remote).
-
-If a task exists in both places, the system:
-
-Keeps the most recently updated version
-
-Gives priority to completed tasks
-
-Combines tags from both versions
-
-This shows that the system supports synchronization and smart conflict handling.
-
-Overall Reflection
+OVERALL REFLECTION
 
 At first, I thought models.js was the most important file. After exploring more, I realized the project is structured in layers, and each file plays a specific role.
 
